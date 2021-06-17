@@ -9,5 +9,9 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/ui'),
+    require('@tailwindcss/typography'),
+    require("@tailwindcss/forms")({
+      strategy: 'class',
+    }),
   ]
 }
