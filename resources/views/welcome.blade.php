@@ -12,8 +12,9 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <script src="{{ mix('js/app.js') }}"></script>
 </head>
-<body style="background-image: url({{ asset('storage/images/layout/airline-runway-1.jpg') }}); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
+<body style="background-image: url({{ asset('storage/images/layout/airline-runway-3-with-plane.jpg') }}); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
     <header class="h-1/2 shadow-2xl bg-gray-900">
         <nav class="px-8 mx-auto shadow-lg bg-gray-300">
             <div class="flex justify-between">
@@ -90,96 +91,98 @@
                     &DoubleLeftArrow; Quick flight &DoubleRightArrow;
                 </h1>
             </div>
-            <div class="w-2/3 bg-gray-400 p-8 rounded">
-                <div class="prose prose-2xl font-bold">
+            <div class="w-2/3">
+                <div class="prose prose-2xl font-bold text-gray-100">
                     Book a flight
                 </div>
-                <div class="flex py-5">
-                    <div class="flex justify-center space-x-5 items-center">
-                        <label class="prose prose-lg italic font-bold">One way trip</label>
-                        <input type="radio" name="one_way_trip_radio" value="11" class="form-input" id="one-way-trip-radio" />
+                <form action="" method="POST" id="flight-form">
+                    <div class="flex py-5">
+                        <div class="flex justify-center space-x-5 items-center">
+                            <label class="prose prose-lg italic text-gray-100">One way trip</label>
+                            <input type="checkbox" checked name="one_way_trip_radio" value="1" class="form-input" id="one-way-trip-radio" />
+                        </div>
+
+                        <span class="font-bold">
+                            &nbsp; / &nbsp;
+                        </span>
+
+                        <div class="flex justify-center space-x-5 items-center">
+                            <label class="prose prose-lg italic text-gray-100">Return trip</label>
+                            <input type="checkbox" name="return_trip_radio" value="11" class="form-input" id="return-trip-radio" />
+                        </div>
                     </div>
 
-                    <span class="font-bold">
-                        &nbsp; / &nbsp;
-                    </span>
+                    <div class="flex space-x-5">
+                        <div class="flex flex-col w-full">
+                            <label class="prose prose-lg italic py-2 text-gray-100">
+                                Flying from:
+                            </label>
+                            <select name="flying_from" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
+                                <option value="">From ...</option>
+                                <option value="Lagos">Lagos</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-full">
+                            <label class="prose prose-lg italic py-2 text-gray-100">
+                                Flying to:
+                            </label>
+                            <select name="flying_to" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
+                                <option value="">To ...</option>
+                                <option value="Delta">Delta</option>
+                            </select>
+                        </div>                    
+                    </div>
 
-                    <div class="flex justify-center space-x-5 items-center">
-                        <label class="prose prose-lg italic font-bold">Return trip</label>
-                        <input type="radio" name="return_trip_radio" value="11" class="form-input" id="return-trip-radio" />
+                    <div class="flex space-x-5 mt-3">
+                        <div class="flex flex-col w-1/2">
+                            <label class="prose prose-lg italic text-gray-100">
+                                Departure date:
+                            </label>
+                            <input type="date" name="departure_date" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input"  />
+                        </div>
+                        <div class="flex flex-col w-1/2 hide-return-date">
+                            <label class="prose prose-lg italic text-gray-100">
+                                Returning date:
+                            </label>
+                            <input type="date" name="returning_date" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="flex space-x-5">
-                    <div class="flex flex-col w-full">
-                        <label class="prose prose-lg italic font-bold py-2">
-                            Flying from:
-                        </label>
-                        <select class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
-                            <option value="">From ...</option>
-                            <option value=""></option>
-                        </select>
+                    <div class="flex space-x-5 mt-3">
+                        <div class="flex flex-col w-1/2">
+                            <label class="prose prose-lg italic  text-gray-100">
+                                Reservation type:
+                            </label>
+                            <select name="reservation_type" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
+                                <option value="">Type ...</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Child">Child</option>
+                                <option value="Infant">Infant</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-1/2 hide-return-date">
+                            <label class="prose prose-lg italic text-gray-100">
+                                Number of ticket(s):
+                            </label>
+                            <input type="number" name="number_of_ticket" min="1" max="10" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" placeholder="Number of ticket(s)" />
+                        </div>
                     </div>
-                    <div class="flex flex-col w-full">
-                        <label class="prose prose-lg italic font-bold py-2">
-                            Flying to:
-                        </label>
-                        <select class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
-                            <option value="">To ...</option>
-                            <option value=""></option>
-                        </select>
-                    </div>                    
-                </div>
 
-                <div class="flex space-x-5 mt-3">
-                    <div class="flex flex-col w-1/2">
-                        <label class="prose prose-lg italic font-bold">
-                            Departure date:
-                        </label>
-                        <input type="date" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input"  />
+                    <div class="flex mt-5">
+                        <button type="submit" class="bg-blue-700 text-gray-100 rounded-tr-lg rounded-bl-lg p-3 font-bold hover:bg-blue-600 hover:text-gray-200 w-full">
+                            Submit .
+                        </button>
                     </div>
-                    <div class="flex flex-col w-1/2 hide-return-date">
-                        <label class="prose prose-lg italic font-bold">
-                            Returning date:
-                        </label>
-                        <input type="date" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" />
-                    </div>
-                </div>
-
-                <div class="flex space-x-5 mt-3">
-                    <div class="flex flex-col w-1/2">
-                        <label class="prose prose-lg italic font-bold">
-                            Reservation type:
-                        </label>
-                        <select class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
-                            <option value="">Type ...</option>
-                            <option value="Adult">Adult</option>
-                            <option value="Child">Child</option>
-                            <option value="Infant">Infant</option>
-                        </select>
-                    </div>
-                    <div class="flex flex-col w-1/2 hide-return-date">
-                        <label class="prose prose-lg italic font-bold">
-                            Number of ticket(s):
-                        </label>
-                        <input type="number" min="1" max="10" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" placeholder="Number of ticket(s)" />
-                    </div>
-                </div>
-
-                <div class="flex mt-5">
-                    <button type="submit" class="bg-gray-900 text-gray-100 rounded-tr-lg rounded-bl-lg p-3 font-bold hover:bg-gray-200 hover:text-gray-800 w-full">
-                        Submit .
-                    </button>
-                </div>
+                </form>
             </div>
         </div>
     </main>
 
-    <script>
+    <script type="text/javascript">
         const one_way_trip_radio = document.getElementById('one-way-trip-radio')
         const return_trip_radio = document.getElementById('return-trip-radio')
         const return_date = document.querySelector('.hide-return-date')
-        
+
         window.onload = function(){
             return_date.classList.add("hidden")
         }
@@ -192,19 +195,69 @@
             return_date.classList.remove("hidden")
         })
 
+
+        $(function(){
+            $("#flight-form").on("submit", function(e){
+                e.preventDefault()
+                var data = $(this).serialize()
+                console.log(data)
+            })
+
+            
+        })
+
     </script>
 
-    <footer class="shadow-2xl bg-gray-900 p-16">
-        <div class="flex xs:flex-col text-gray-200">
-            <div class="">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod dolorum vero vitae consequuntur laudantium quas tenetur doloremque reiciendis at nisi animi recusandae repellat aut, neque ad, corporis, velit voluptatum modi?
+    <footer class="shadow-2xl bg-gray-900 mt-64">
+        <div class="flex text-gray-200 p-2 justify-around" >
+            <div class="p-5 w-1/3">
+                <div class="text-md">
+                    Address: 
+                    <p class="text-sm">
+                        2, Ahmadu bello way, buhari estate, ijeun, abeokuta.
+                    </p>
+                </div>
+                <div class="text-md mt-3">
+                    Contact: 
+                    <p class="text-sm">
+                        E-mail: femiairline@gmail.com
+                    </p>
+                    <p class="text-sm">
+                        Phone: 0803366458
+                    </p>
+                </div>
             </div>
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, nulla harum ad ab vitae in magni enim maiores sint? Temporibus molestias aperiam numquam rem ad magnam aliquam, illo nisi necessitatibus.
+            <div class="p-5 w-1/3">
+                <div class="text-md">
+                    Quick links: 
+                </div>
+                <div class="text-sm mt-3">
+                    <a href="#" class="text-blue-600 block hover:text-blue-800">link 1</a>
+                    <a href="#" class="text-blue-600 block hover:text-blue-800">link 2</a>
+                    <a href="#" class="text-blue-600 block hover:text-blue-800">link 3</a>
+                    <a href="#" class="text-blue-600 block hover:text-blue-800">link 4</a>
+                    <a href="#" class="text-blue-600 block hover:text-blue-800">link 5</a>
+                </div>
             </div>
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque, rerum vel accusamus mollitia aperiam id ipsum quos reprehenderit recusandae at cum? Accusantium at reprehenderit totam vel facere est vitae.
+            <div class="p-5 w-1/3">
+                <div class="text-md">
+                    Support: 
+                    <p class="text-sm">
+                        Support line: 08036696555
+                    </p>
+                </div>
+                <div class="text-md mt-3">
+                    Links: 
+                    <div class="text-sm">
+                        <a href="#" class="text-blue-600 block hover:text-blue-800">link 1</a>
+                        <a href="#" class="text-blue-600 block hover:text-blue-800">link 2</a>
+                        <a href="#" class="text-blue-600 block hover:text-blue-800">link 3</a>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="copyright flex justify-center text-center text-xs items-center py-2 bg-gray-800 text-gray-100 font-bold">
+           {{ config("app.name") }} &middot; All rights reserved <br/> &copy; {{ date('Y') }}
         </div>
     </footer>
     <script type="text/javascript">
