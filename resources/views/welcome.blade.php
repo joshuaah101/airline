@@ -14,14 +14,14 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('js/app.js') }}"></script>
 </head>
-<body style="background-image: url({{ asset('storage/images/layout/airline-runway-3-with-plane.jpg') }}); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
-    <header class="h-1/2 shadow-2xl bg-gray-900">
-        <nav class="px-8 mx-auto shadow-lg bg-gray-300">
+<body style="background-image: url({{ asset('storage/images/layout/airline-runway-1-with-plane.jpg') }}); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
+    <header class="h-1/2 shadow-2xl bg-blue-900 bg-opacity-75">
+        <nav class="px-8 mx-auto shadow-lg bg-transparent">
             <div class="flex justify-between">
                 <!-- logo -->
                 
                 <div class="flex">
-                    <a href="#" class="flex items-center px-2 py-4 text-gray-800 hover:text-gray-500">
+                    <a href="#" class="flex items-center px-2 py-4 text-blue-100 hover:text-blue-300">
                         <svg class="fill-current h-8 w-8 mr-2" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                         </svg>
@@ -30,11 +30,11 @@
                 </div>
                 <!-- menu -->
                 <div class="hidden sm:flex items-center space-x-1 sm:space-none">
-                    <a href="/" class="{{ request()->is('/') ? 'py-2 px-4 rounded bg-gray-900 text-gray-200 hover:text-gray-400 font-bold font-mono' : 'py-5 px-2 text-gray-800 hover:text-gray-500 font-mono' }}">Home</a>
-                    <a href="about" class="{{ request()->is('about') ? 'py-2 px-4 rounded bg-gray-900 text-gray-200 hover:text-gray-405 font-bold font-mono' : 'py-5 px-2 text-gray-800 hover:text-gray-500 font-mono' }}">About</a>
-                    <a href="contact" class="{{ request()->is('contact') ? 'py-2 px-4 rounded bg-gray-900 text-gray-200 hover:text-gray-400 font-bold font5mono' : 'py-5 px-2 text-gray-800 hover:text-gray-500 font-mono' }}">Contact</a>
-                    <a href="login" class="{{ request()->is('login') ? 'py-2 px-4 rounded bg-gray-900 text-gray-200 hover:text-gray-405 font-bold font-mono' : 'py-5 px-2 text-gray-800 hover:text-gray-500 font-mono' }}">Login</a>
-                    <a href="register" class="{{ request()->is('register') ? 'py-2 px-4 rounded bg-gray-900 text-gray-200 hover:text-gray-400 font-bold fo5t-mono' : 'py-5 px-2 text-gray-800 hover:text-gray-500 font-mono' }}">Register</a>
+                    <a href="/" class="{{ request()->is('/') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Home</a>
+                    <a href="about" class="{{ request()->is('about') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-305 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">About</a>
+                    <a href="contact" class="{{ request()->is('contact') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Contact</a>
+                    <a href="login" class="{{ request()->is('login') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-305 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Login</a>
+                    <a href="register" class="{{ request()->is('register') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Register</a>
                 </div>
           
                 <!-- 	mobile button here -->
@@ -60,12 +60,12 @@
         <div class="p-16 mt-5 flex">
             <div class="flex flex-col font-mono text-gray-300">
                 <div class="font-bold">
-                    <div class="text-3xl">We offer the best flight experience</div>
-                    <div class="text-2xl mt-8">More affordable & the safest trip from your source to destination</div>
-                    <div class="text-6xl font-serif"> @ {{ config("app.name") }}</div>
+                    <div class="text-2xl">We offer the best flight experience</div>
+                    <div class="text-2xl mt-8">More affordable & the safest trip from your <br/> source to destination</div>
+                    <div class="text-4xl font-serif"> @ {{ config("app.name") }}</div>
                 </div>
                 <div class="mt-5">
-                    <button type="button" onclick="quickFlight()" class="py-4 px-5 bg-gray-300 text-gray-700 font-bold font-serif shadow-xl rounded-br-2xl rounded-tl-xl hover:text-gray-900">
+                    <button type="button" onclick="quickFlight()" class="py-4 px-5 bg-green-600 text-green-200 hover:text-green-300 hover:bg-green-800 font-bold font-serif shadow-xl rounded-br-2xl rounded-tl-xl ">
                         Book a flight!
                     </button>
                 </div>
@@ -85,17 +85,12 @@
     
 
     <main class="mt-64" id="main">
-        <div class="flex justify-between p-16 bg-gray-900 text-gray-900" id="quickTrip">
-            <div class="flex justify-center items-center w-1/3">
-                <h1 class="font-bold italic text-4xl prose prose-2xl prose-cool-gray">
-                    &DoubleLeftArrow; Quick flight &DoubleRightArrow;
-                </h1>
-            </div>
-            <div class="w-2/3">
-                <div class="prose prose-2xl font-bold text-gray-100">
-                    Book a flight
-                </div>
-                <form action="" method="POST" id="flight-form">
+        <div id="quickTrip">
+            <form action="" method="POST" id="flight-form" class="flex justify-around p-8 bg-blue-900 text-gray-200 bg-opacity-75" >
+                <div class="w-1/3">
+                    <div class="prose prose-2xl text-4xl font-bold text-gray-100">
+                        Book a flight
+                    </div>
                     <div class="flex py-5">
                         <div class="flex justify-center space-x-5 items-center">
                             <label class="prose prose-lg italic text-gray-100">One way trip</label>
@@ -112,12 +107,35 @@
                         </div>
                     </div>
 
+                        
+                    <div class="flex space-x-5 mt-3">
+                        <div class="flex flex-col w-1/2">
+                            <label class="prose prose-lg italic  text-gray-100">
+                                Reservation type:
+                            </label>
+                            <select name="reservation_type" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
+                                <option value="">Type ...</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Child">Child</option>
+                                <option value="Infant">Infant</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-1/2">
+                            <label class="prose prose-lg italic text-gray-100">
+                                Number of ticket(s):
+                            </label>
+                            <input type="number" name="number_of_ticket" min="1" max="10" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" placeholder="Number of ticket(s)" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/3">
                     <div class="flex space-x-5">
                         <div class="flex flex-col w-full">
                             <label class="prose prose-lg italic py-2 text-gray-100">
                                 Flying from:
                             </label>
-                            <select name="flying_from" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
+                            <select name="flying_from" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
                                 <option value="">From ...</option>
                                 <option value="Lagos">Lagos</option>
                             </select>
@@ -126,7 +144,7 @@
                             <label class="prose prose-lg italic py-2 text-gray-100">
                                 Flying to:
                             </label>
-                            <select name="flying_to" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
+                            <select name="flying_to" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
                                 <option value="">To ...</option>
                                 <option value="Delta">Delta</option>
                             </select>
@@ -138,43 +156,23 @@
                             <label class="prose prose-lg italic text-gray-100">
                                 Departure date:
                             </label>
-                            <input type="date" name="departure_date" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input"  />
+                            <input type="date" name="departure_date" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input"  />
                         </div>
                         <div class="flex flex-col w-1/2 hide-return-date">
                             <label class="prose prose-lg italic text-gray-100">
                                 Returning date:
                             </label>
-                            <input type="date" name="returning_date" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" />
-                        </div>
-                    </div>
-
-                    <div class="flex space-x-5 mt-3">
-                        <div class="flex flex-col w-1/2">
-                            <label class="prose prose-lg italic  text-gray-100">
-                                Reservation type:
-                            </label>
-                            <select name="reservation_type" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
-                                <option value="">Type ...</option>
-                                <option value="Adult">Adult</option>
-                                <option value="Child">Child</option>
-                                <option value="Infant">Infant</option>
-                            </select>
-                        </div>
-                        <div class="flex flex-col w-1/2 hide-return-date">
-                            <label class="prose prose-lg italic text-gray-100">
-                                Number of ticket(s):
-                            </label>
-                            <input type="number" name="number_of_ticket" min="1" max="10" class="text-gray-100 bg-gray-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" placeholder="Number of ticket(s)" />
+                            <input type="date" name="returning_date" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" />
                         </div>
                     </div>
 
                     <div class="flex mt-5">
-                        <button type="submit" class="bg-blue-700 text-gray-100 rounded-tr-lg rounded-bl-lg p-3 font-bold hover:bg-blue-600 hover:text-gray-200 w-full">
+                        <button type="submit" class="bg-green-600 text-green-200 hover:text-green-300 hover:bg-green-800 rounded-tr-lg rounded-bl-lg p-3 font-bold  w-1/2">
                             Submit .
                         </button>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </main>
 
@@ -208,7 +206,7 @@
 
     </script>
 
-    <footer class="shadow-2xl bg-gray-900 mt-64">
+    <footer class="shadow-2xl bg-blue-900 mt-64">
         <div class="flex text-gray-200 p-2 justify-around" >
             <div class="p-5 w-1/3">
                 <div class="text-md">
