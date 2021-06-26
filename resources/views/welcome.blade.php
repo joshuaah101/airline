@@ -30,11 +30,11 @@
                 </div>
                 <!-- menu -->
                 <div class="hidden sm:flex items-center space-x-1 sm:space-none">
-                    <a href="/" class="{{ request()->is('/') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Home</a>
-                    <a href="about" class="{{ request()->is('about') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-305 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">About</a>
-                    <a href="contact" class="{{ request()->is('contact') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Contact</a>
-                    <a href="login" class="{{ request()->is('login') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-305 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Login</a>
-                    <a href="register" class="{{ request()->is('register') ? 'py-1 text-lg px-4 text-blue-900 border-b-2 border-blue-300 hover:border-blue-900 tracking-wider font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Register</a>
+                    <a href="/" class="{{ request()->is('/') ? 'py-1 text-lg px-4 border-b-4 rounded text-blue-300 border-green-600 hover:border-green-900 tracking-wide font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Home</a>
+                    <a href="about" class="{{ request()->is('about') ? 'py-1 text-lg px-4 border-b-4 rounded text-blue-300 border-green-600 hover:border-green-900 tracking-wide font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">About</a>
+                    <a href="contact" class="{{ request()->is('contact') ? 'py-1 text-lg px-4 border-b-4 rounded text-blue-300 border-green-600 hover:border-green-900 tracking-wide font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Contact</a>
+                    <a href="login" class="{{ request()->is('login') ? 'py-1 text-lg px-4 border-b-4 rounded text-blue-300 border-green-600 hover:border-green-900 tracking-wide font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Login</a>
+                    <a href="register" class="{{ request()->is('register') ? 'py-1 text-lg px-4 border-b-4 rounded text-blue-300 border-green-600 hover:border-green-900 tracking-wide font-bold hover:text-blue-300 font-bold font-mono' : 'py-5 px-2 text-blue-100 hover:text-blue-300 font-mono' }}">Register</a>
                 </div>
           
                 <!-- 	mobile button here -->
@@ -48,12 +48,12 @@
             </div>
         
             <!-- mobile menu here   -->
-            <div class="mobile-menu-items hidden bg-gray-300 sm:hidden m-3 p-3">
-                <a href="#" class="{{ request()->is('/') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">Home</a>
-                <a href="#" class="{{ request()->is('about') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">About</a>
-                <a href="#" class="{{ request()->is('contact') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">Contact</a>
-                <a href="#" class="{{ request()->is('login') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">Login</a>
-                <a href="#" class="{{ request()->is('register') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">Register</a>
+            <div class="mobile-menu-items hidden bg-gray-100 sm:hidden m-3 p-3">
+                <a href="#" class="{{ request()->is('/') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block font-bold border-green-900' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">Home</a>
+                <a href="#" class="{{ request()->is('about') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block font-bold border-green-900' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">About</a>
+                <a href="#" class="{{ request()->is('contact') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block font-bold border-green-900' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">Contact</a>
+                <a href="#" class="{{ request()->is('login') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block font-bold border-green-900' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">Login</a>
+                <a href="#" class="{{ request()->is('register') ? 'py-2 text-gray-900 border-b-2 hover:text-gray-500 block font-bold border-green-900' : 'py-2 text-gray-800 hover:text-gray-500 block'}}">Register</a>
             </div>
         </nav>
 
@@ -65,8 +65,8 @@
                     <div class="text-4xl font-serif"> @ {{ config("app.name") }}</div>
                 </div>
                 <div class="mt-5">
-                    <button type="button" onclick="quickFlight()" class="py-4 px-5 bg-green-600 text-green-200 hover:text-green-300 hover:bg-green-800 font-bold font-serif shadow-xl rounded-br-2xl rounded-tl-xl ">
-                        Book a flight!
+                    <button type="button" onclick="quickFlight()" class="py-3 px-3 bg-green-600 text-green-200 hover:text-green-300 hover:bg-green-800 font-bold font-serif shadow-xl rounded-br-2xl rounded-tl-xl w-1/2">
+                        Book a flight
                     </button>
                 </div>
             </div>
@@ -85,92 +85,84 @@
     
 
     <main class="mt-64" id="main">
-        <div id="quickTrip">
-            <form action="" method="POST" id="flight-form" class="flex justify-around p-8 bg-blue-900 text-gray-200 bg-opacity-75" >
-                <div class="w-1/3">
-                    <div class="prose prose-2xl text-4xl font-bold text-gray-100">
-                        Book a flight
+        <div id="quickTrip" class="grid grid-cols-1 sm:grid-cols-2 bg-blue-900 text-gray-200 bg-opacity-75 p-8">
+            <div class="flex sm:justify-center items-center prose prose-2xl text-4xl font-bold text-gray-100">
+                Book a flight
+            </div>
+
+            <form action="" method="POST" id="flight-form">
+                <div class="grid grid-cols-2 mt-5">
+                    <div class="flex items-center space-x-5">
+                        <label class="prose prose-lg italic text-gray-100">One way trip</label>
+                        <input type="radio" name="trip_type" value="0" id="one-way-trip-radio" />
                     </div>
-                    <div class="flex py-5">
-                        <div class="flex justify-center space-x-5 items-center">
-                            <label class="prose prose-lg italic text-gray-100">One way trip</label>
-                            <input type="checkbox" checked name="one_way_trip_radio" value="1" class="form-input" id="one-way-trip-radio" />
-                        </div>
-
-                        <span class="font-bold">
-                            &nbsp; / &nbsp;
-                        </span>
-
-                        <div class="flex justify-center space-x-5 items-center">
-                            <label class="prose prose-lg italic text-gray-100">Return trip</label>
-                            <input type="checkbox" name="return_trip_radio" value="11" class="form-input" id="return-trip-radio" />
-                        </div>
+                    <div class="flex items-center space-x-5">
+                        <label class="prose prose-lg italic text-gray-100">Return trip</label>
+                        <input type="radio" name="trip_type" value="1" id="return-trip-radio" />
                     </div>
-
-                        
-                    <div class="flex space-x-5 mt-3">
-                        <div class="flex flex-col w-1/2">
-                            <label class="prose prose-lg italic  text-gray-100">
-                                Reservation type:
-                            </label>
-                            <select name="reservation_type" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
-                                <option value="">Type ...</option>
-                                <option value="Adult">Adult</option>
-                                <option value="Child">Child</option>
-                                <option value="Infant">Infant</option>
-                            </select>
-                        </div>
-                        <div class="flex flex-col w-1/2">
-                            <label class="prose prose-lg italic text-gray-100">
-                                Number of ticket(s):
-                            </label>
-                            <input type="number" name="number_of_ticket" min="1" max="10" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" placeholder="Number of ticket(s)" />
-                        </div>
+                </div>
+                                        
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 mt-5">
+                    <div class="w-full">
+                        <label class="prose prose-lg italic  text-gray-100">
+                            Reservation type:
+                        </label>
+                        <select name="reservation_type" class="text-gray-900 bg-white font-bold p-2 form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none w-full">
+                            <option value="">Type ...</option>
+                            <option value="Adult">Adult</option>
+                            <option value="Child">Child</option>
+                            <option value="Infant">Infant</option>
+                        </select>
+                    </div>
+                    <div class="w-full">
+                        <label class="prose prose-lg italic text-gray-100">
+                            Number of ticket(s):
+                        </label>
+                        <input type="number" name="number_of_ticket" min="1" max="10" class="text-gray-900 bg-white font-bold p-2 focus:bg-gray-200  focus:text-gray-800 focus:outline-none appearance-none form-input w-full" id="" placeholder="Number of ticket(s)" />
                     </div>
                 </div>
 
-                <div class="w-1/3">
-                    <div class="flex space-x-5">
-                        <div class="flex flex-col w-full">
-                            <label class="prose prose-lg italic py-2 text-gray-100">
-                                Flying from:
-                            </label>
-                            <select name="flying_from" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
-                                <option value="">From ...</option>
-                                <option value="Lagos">Lagos</option>
-                            </select>
-                        </div>
-                        <div class="flex flex-col w-full">
-                            <label class="prose prose-lg italic py-2 text-gray-100">
-                                Flying to:
-                            </label>
-                            <select name="flying_to" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none ">
-                                <option value="">To ...</option>
-                                <option value="Delta">Delta</option>
-                            </select>
-                        </div>                    
+                
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 mt-5">
+                    <div class="w-full">
+                        <label class="prose prose-lg italic py-2 text-gray-100">
+                            Flying from:
+                        </label>
+                        <select name="flying_from" class="text-gray-900 bg-white font-bold p-2 form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none w-full">
+                            <option value="">From ...</option>
+                            <option value="Lagos">Lagos</option>
+                        </select>
                     </div>
+                    <div class="w-full">
+                        <label class="prose prose-lg italic py-2 text-gray-100">
+                            Flying to:
+                        </label>
+                        <select name="flying_to" class="text-gray-900 bg-white font-bold p-2 form-select focus:bg-gray-200  focus:text-gray-800 focus:outline-none w-full">
+                            <option value="">To ...</option>
+                            <option value="Delta">Delta</option>
+                        </select>
+                    </div>                    
+                </div>
 
-                    <div class="flex space-x-5 mt-3">
-                        <div class="flex flex-col w-1/2">
-                            <label class="prose prose-lg italic text-gray-100">
-                                Departure date:
-                            </label>
-                            <input type="date" name="departure_date" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input"  />
-                        </div>
-                        <div class="flex flex-col w-1/2 hide-return-date">
-                            <label class="prose prose-lg italic text-gray-100">
-                                Returning date:
-                            </label>
-                            <input type="date" name="returning_date" class="text-gray-100 bg-blue-900 font-bold p-2 rounded-tl-lg focus:bg-gray-200  focus:text-gray-800 focus:outline-none form-input" id="" />
-                        </div>
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 mt-5">
+                    <div class="w-full">
+                        <label class="prose prose-lg italic text-gray-100">
+                            Departure date:
+                        </label>
+                        <input type="date" name="departure_date" class="text-gray-900 bg-white font-bold p-2 focus:bg-gray-200  focus:text-gray-800 focus:outline-none w-full form-input"  />
                     </div>
+                    <div class="w-full hide-return-date">
+                        <label class="prose prose-lg italic text-gray-100">
+                            Returning date:
+                        </label>
+                        <input type="date" name="returning_date" class="text-gray-900 bg-white font-bold p-2 focus:bg-gray-200  focus:text-gray-800 focus:outline-none w-full form-input" id="" />
+                    </div>
+                </div>
 
-                    <div class="flex mt-5">
-                        <button type="submit" class="bg-green-600 text-green-200 hover:text-green-300 hover:bg-green-800 rounded-tr-lg rounded-bl-lg p-3 font-bold  w-1/2">
-                            Submit .
-                        </button>
-                    </div>
+                <div class="mt-5 mb-5">
+                    <button type="submit" class="bg-green-600 text-green-200 hover:text-green-300 hover:bg-green-800 rounded-tr-lg rounded-bl-lg p-3 font-bold  w-1/2">
+                        Submit .
+                    </button>
                 </div>
             </form>
         </div>
@@ -206,17 +198,17 @@
 
     </script>
 
-    <footer class="shadow-2xl bg-blue-900 mt-64">
-        <div class="flex text-gray-200 p-2 justify-around" >
-            <div class="p-5 w-1/3">
+    <footer class="shadow-2xl bg-blue-900 mt-64 bg-opacity-75">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-gray-200 p-2" >
+            <div class="p-5 w-full">
                 <div class="text-md">
-                    Address: 
+                    <h1 class="font-bold">Address: </h1> 
                     <p class="text-sm">
                         2, Ahmadu bello way, buhari estate, ijeun, abeokuta.
                     </p>
                 </div>
                 <div class="text-md mt-3">
-                    Contact: 
+                    <h1 class="font-bold">Contact: </h1>
                     <p class="text-sm">
                         E-mail: femiairline@gmail.com
                     </p>
@@ -225,9 +217,9 @@
                     </p>
                 </div>
             </div>
-            <div class="p-5 w-1/3">
+            <div class="p-5 w-full">
                 <div class="text-md">
-                    Quick links: 
+                    <h1 class="font-bold">Quick links: </h1>
                 </div>
                 <div class="text-sm mt-3">
                     <a href="#" class="text-blue-600 block hover:text-blue-800">link 1</a>
@@ -237,7 +229,7 @@
                     <a href="#" class="text-blue-600 block hover:text-blue-800">link 5</a>
                 </div>
             </div>
-            <div class="p-5 w-1/3">
+            <div class="p-5 w-full">
                 <div class="text-md">
                     Support: 
                     <p class="text-sm">
@@ -254,7 +246,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright flex justify-center text-center text-xs items-center py-2 bg-gray-800 text-gray-100 font-bold">
+        <div class="flex text-center text-xs justify-center items-center py-2 bg-gray-800 text-gray-100 font-bold">
            {{ config("app.name") }} &middot; All rights reserved <br/> &copy; {{ date('Y') }}
         </div>
     </footer>
